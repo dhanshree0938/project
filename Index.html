@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>L'Oréal | Products</title>
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <style>
+    /* ===== Base Styling ===== */
+    body {
+      background-color: #ffffff;
+      font-family: 'Segoe UI', sans-serif;
+      color: #333;
+    }
+
+    /* ===== Navbar ===== */
+    .navbar {
+      background-color: #e60044;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-brand {
+      color: #fff !important;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .nav-link {
+      color: #fff !important;
+      margin-right: 1rem;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav-link:hover {
+      color: #ffd1dc !important;
+    }
+
+    /* ===== Hero Section ===== */
+    .hero {
+      background: linear-gradient(rgba(230, 0, 68, 0.8), rgba(230, 0, 68, 0.8)),
+        url('https://images.unsplash.com/photo-1612810806720-8433e1a3b658?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+      color: #fff;
+      text-align: center;
+      padding: 80px 20px;
+      border-radius: 0 0 40px 40px;
+    }
+
+    .hero h1 {
+      font-weight: 700;
+      font-size: 2.5rem;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      margin-top: 10px;
+      opacity: 0.9;
+    }
+
+    /* ===== Sidebar ===== */
+    .sidebar {
+      background-color: #fff;
+      border-radius: 15px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+      padding: 25px;
+      position: sticky;
+      top: 90px;
+    }
+
+    .sidebar h6 {
+      color: #e60044;
+      font-weight: 700;
+    }
+
+    .sidebar a {
+      display: block;
+      padding: 8px 0;
+      color: #333;
+      text-decoration: none;
+      transition: color 0.3s, transform 0.2s;
+    }
+
+    .sidebar a:hover {
+      color: #e60044;
+      transform: translateX(3px);
+    }
+
+    .btn-primary {
+      background-color: #e60044;
+      border: none;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      background-color: #b80036;
+    }
+
+    /* ===== Product Cards ===== */
+    .card {
+      border: none;
+      border-radius: 14px;
+      overflow: hidden;
+      transition: transform 0.25s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .card-img-top {
+      height: 220px;
+      object-fit: contain;
+      background-color: #f8f9fa;
+    }
+
+    .card-title {
+      color: #e60044;
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+
+    .card-text {
+      color: #6c757d;
+      font-size: 0.9rem;
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      background-color: #212529;
+      color: #fff;
+      text-align: center;
+      padding: 40px 0;
+      margin-top: 60px;
+      border-top: 4px solid #e60044;
+    }
+
+    footer h6 {
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+
+    footer .btn {
+      border-radius: 50%;
+      margin: 0 10px;
+      color: #fff;
+      font-size: 1.3rem;
+      transition: transform 0.2s ease;
+    }
+
+    footer .btn:hover {
+      transform: scale(1.15);
+    }
+
+    footer p {
+      color: #aaa;
+      margin-top: 15px;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ===== Navbar ===== -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">L'Oréal</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="register.html">Register</a></li>
+          <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== Hero Section ===== -->
+  <section class="hero">
+    <div class="container">
+      <h1>Discover L’Oréal’s Signature Beauty Collection</h1>
+      <p>Explore our premium range of skincare, haircare, and makeup products crafted to redefine beauty.</p>
+    </div>
+  </section>
+
+  <!-- ===== Main Content ===== -->
+  <div class="container my-5">
+    <div class="row g-4">
+      <!-- Sidebar -->
+      <div class="col-12 col-md-3 col-lg-2">
+        <div class="sidebar">
+          <h6 class="fw-bold mb-3">Filter by Category</h6>
+          <ul class="list-unstyled">
+            <li><a href="#">All</a></li>
+            <li><a href="#">Skincare</a></li>
+            <li><a href="#">Haircare</a></li>
+            <li><a href="#">Makeup</a></li>
+            <li><a href="#">Fragrance</a></li>
+          </ul>
+          <hr>
+          <h6 class="fw-bold mb-3">Filter by Price</h6>
+          <form>
+            <div class="mb-3">
+              <input type="range" class="form-range" min="0" max="50000" step="1000" id="priceRange">
+              <label for="priceRange" class="form-label">Up to ₹50,000</label>
+            </div>
+            <button type="button" class="btn btn-primary w-100">Apply</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Products Section -->
+      <div class="col-12 col-md-9 col-lg-10">
+        <div class="row g-4">
+
+          <!-- Product Card -->
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+            <div class="card h-100">
+              <img src="Loreal Brand.png" alt="L'Oréal Product" class="card-img-top">
+              <div class="card-body text-center">
+                <h5 class="card-title">L'Oréal Paris Serum</h5>
+                <p class="card-text">Advanced hair serum that nourishes and adds shine.</p>
+                <h6 class="fw-bold">₹2,499</h6>
+                <button class="btn btn-primary w-100 mt-2">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Repeat Product Cards -->
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+            <div class="card h-100">
+              <img src="Loreal Brand.png" class="card-img-top" alt="Revitalift Cream">
+              <div class="card-body text-center">
+                <h5 class="card-title">L'Oréal Revitalift Cream</h5>
+                <p class="card-text">Anti-aging cream that rejuvenates skin and adds glow.</p>
+                <h6 class="fw-bold">₹3,299</h6>
+                <button class="btn btn-primary w-100 mt-2">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+            <div class="card h-100">
+              <img src="Loreal Brand.png" class="card-img-top" alt="Hair Color">
+              <div class="card-body text-center">
+                <h5 class="card-title">L'Oréal Hair Color</h5>
+                <p class="card-text">Rich, long-lasting color with nourishing formula.</p>
+                <h6 class="fw-bold">₹1,799</h6>
+                <button class="btn btn-primary w-100 mt-2">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+            <div class="card h-100">
+              <img src="Loreal Brand.png" class="card-img-top" alt="Shampoo">
+              <div class="card-body text-center">
+                <h5 class="card-title">L'Oréal Shampoo</h5>
+                <p class="card-text">Cleanses and nourishes hair with every wash.</p>
+                <h6 class="fw-bold">₹1,299</h6>
+                <button class="btn btn-primary w-100 mt-2">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <!-- End Products Section -->
+    </div>
+  </div>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <div class="container">
+      <h6>Connect with us</h6>
+      <div>
+        <button class="btn btn-success"><i class="bi bi-whatsapp"></i></button>
+        <button class="btn btn-danger"><i class="bi bi-instagram"></i></button>
+        <button class="btn btn-primary"><i class="bi bi-facebook"></i></button>
+        <button class="btn btn-info"><i class="bi bi-twitter"></i></button>
+      </div>
+      <p>© 2025 L'Oréal. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>L'Oréal | About Us</title>
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+  <style>
+    /* ===== Global Styling ===== */
+    body {
+      font-family: 'Poppins', 'Segoe UI', sans-serif;
+      background-color: #fdfdfd;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* ===== Navbar ===== */
+    .navbar {
+      background: linear-gradient(90deg, rgb(246, 46, 79), rgb(255, 99, 132));
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s ease;
+    }
+
+    .navbar-brand {
+      color: #fff !important;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      font-size: 1.5rem;
+    }
+
+    .nav-link {
+      color: #fff !important;
+      font-weight: 500;
+      margin: 0 6px;
+      border-radius: 6px;
+      padding: 8px 14px;
+      transition: all 0.3s ease;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      background-color: rgba(255, 255, 255, 0.15);
+      transform: translateY(-2px);
+    }
+
+    /* ===== Hero Section ===== */
+    .hero-section {
+      background: linear-gradient(to right, #fff 30%, #ffe6eb 100%);
+      text-align: center;
+      padding: 100px 20px 80px;
+      position: relative;
+    }
+
+    .hero-section::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url('https://www.transparenttextures.com/patterns/white-diamond.png');
+      opacity: 0.1;
+    }
+
+    .hero-section h1 {
+      color: rgb(246, 46, 79);
+      font-weight: 700;
+      font-size: 3rem;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    }
+
+    .hero-section p {
+      color: #666;
+      font-size: 1.15rem;
+      margin-top: 10px;
+    }
+
+    /* ===== About Content ===== */
+    .about-section {
+      padding: 80px 15px;
+    }
+
+    .about-section img {
+      border-radius: 16px;
+      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .about-section img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
+    }
+
+    .about-section h3 {
+      color: rgb(246, 46, 79);
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .about-section p {
+      color: #555;
+      line-height: 1.8;
+      font-size: 1rem;
+    }
+
+    /* ===== Core Values ===== */
+    .values-section {
+      background: linear-gradient(180deg, #fff, #ffe6eb);
+      padding: 70px 15px;
+      border-radius: 16px;
+      box-shadow: 0 4px 25px rgba(0, 0, 0, 0.05);
+    }
+
+    .values-section h4 {
+      color: rgb(246, 46, 79);
+      font-weight: 700;
+      margin-bottom: 40px;
+      font-size: 1.8rem;
+    }
+
+    .values-section i {
+      background-color: #fff;
+      border-radius: 50%;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      padding: 15px;
+      font-size: 2rem;
+      color: rgb(246, 46, 79);
+      transition: all 0.3s ease;
+    }
+
+    .values-section i:hover {
+      transform: scale(1.2) rotate(8deg);
+      box-shadow: 0 4px 15px rgba(246, 46, 79, 0.4);
+    }
+
+    .values-section p {
+      margin-top: 12px;
+      font-weight: 600;
+      color: #444;
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      background-color: #1f1f1f;
+      color: #fff;
+      text-align: center;
+      padding: 35px 15px;
+      border-top: 4px solid rgb(246, 46, 79);
+    }
+
+    footer .social-icons a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #fff;
+      color: rgb(246, 46, 79);
+      width: 45px;
+      height: 45px;
+      margin: 0 8px;
+      border-radius: 50%;
+      font-size: 1.3rem;
+      transition: all 0.3s ease;
+    }
+
+    footer .social-icons a:hover {
+      transform: translateY(-4px) scale(1.05);
+      background-color: rgb(246, 46, 79);
+      color: #fff;
+    }
+
+    footer p {
+      margin-top: 20px;
+      font-size: 0.9rem;
+      color: #bbb;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ===== Navbar ===== -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container-fluid px-4">
+      <a class="navbar-brand" href="#">L'Oréal</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="register.html">Register</a></li>
+          <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+          <li class="nav-item"><a class="nav-link active" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== Hero Section ===== -->
+  <section class="hero-section">
+    <h1>About L'Oréal</h1>
+    <p class="lead">Because you’re worth it.</p>
+  </section>
+
+  <!-- ===== About Section ===== -->
+  <section class="about-section container">
+    <div class="row align-items-center g-5">
+      <div class="col-md-6">
+        <img src="Loreal Brand.png" alt="L'Oréal" class="img-fluid">
+      </div>
+      <div class="col-md-6">
+        <h3>Who We Are</h3>
+        <p>L’Oréal is the world’s leading beauty company, driven by science, innovation, and a passion for empowering individuals through beauty. For over a century, we’ve been redefining the beauty industry with sustainable practices, inclusivity, and groundbreaking products.</p>
+        <p>Our mission is to deliver beauty for all — creating products that cater to every skin tone, hair type, and style across the globe.</p>
+      </div>
+    </div>
+
+      <div class="col-md-6">
+        <h3>Our Commitment</h3>
+        <p>At L’Oréal, we’re committed to sustainability and ethical innovation. Our “L’Oréal for the Future” program aims to reduce our carbon footprint, protect biodiversity, and ensure responsible sourcing of ingredients.</p>
+        <p>We believe that beauty and sustainability can — and must — go hand in hand.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Core Values ===== -->
+  <section class="values-section container text-center mt-5">
+    <h4>Our Core Values</h4>
+    <div class="row justify-content-center">
+      <div class="col-md-3 col-6 mb-4">
+        <i class="bi bi-heart-fill"></i>
+        <p>Passion for Beauty</p>
+      </div>
+      <div class="col-md-3 col-6 mb-4">
+        <i class="bi bi-globe2"></i>
+        <p>Sustainability</p>
+      </div>
+      <div class="col-md-3 col-6 mb-4">
+        <i class="bi bi-lightbulb-fill"></i>
+        <p>Innovation</p>
+      </div>
+      <div class="col-md-3 col-6 mb-4">
+        <i class="bi bi-people-fill"></i>
+        <p>Inclusivity</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <div class="social-icons">
+      <a href="#"><i class="bi bi-whatsapp"></i></a>
+      <a href="#"><i class="bi bi-instagram"></i></a>
+      <a href="#"><i class="bi bi-facebook"></i></a>
+      <a href="#"><i class="bi bi-twitter"></i></a>
+    </div>
+    <p>&copy; 2025 L’Oréal. All rights reserved.</p>
+  </footer>
+
+  <script src="bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
